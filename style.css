@@ -1,0 +1,71 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: cadetblue;
+    overflow-X: hidden;
+}
+header{
+    width: 100%;
+    background-color: antiquewhite;
+}
+#banner-products{
+    width: 100%;
+background-color: rgb(34, 33, 34);
+display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.products-container{
+    width: 80%;
+    height: auto;
+    padding: 20px 0;
+    background-color: rgb(236, 236, 221);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    justify-items: center;
+}
+.products-container > .product-item{
+    width: 200px;
+    height: 120px;
+    background-color: rgb(126, 124, 123);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.products-container > .product-item >  img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+.products-container > .product-item > .product-description{
+    width: 100%;
+    padding: 5px ;
+    background-color: aliceblue;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.products-container > .product-item > .product-description > h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.products-container > .product-item > .product-description > .btn-buy{
+    border-radius: 10px;
+    background-color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px 10px;
+    border: none;
+}
+.btn-buy > a {
+    color: white;
+    text-decoration: none;
+}
