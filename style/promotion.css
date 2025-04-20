@@ -1,0 +1,96 @@
+/* Sección 3: Promociones y Productos Destacados */
+
+/* Promotion Section */
+.promotion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e60023;
+    color: #fff;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  .promotion img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+  }
+  .promotion div h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .promotion div p {
+    max-width: 300px;
+    margin-bottom: 1rem;
+  }
+  .promotion div button {
+    background: #fff;
+    color: #e60023;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  /* Best Sellers Section */
+  .best-sellers {
+    padding: 2rem;
+    text-align: center;
+  }
+  .best-sellers h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+/* Móviles */
+@media only screen and (max-width: 480px) {
+    .promotion {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+      text-align: center !important;
+      padding: 1rem !important;
+      gap: 1rem !important;
+    }
+  
+    .promotion img {
+      width: 100% !important;
+      max-width: none !important;
+      height: auto !important;
+      margin-bottom: 1rem !important;
+      border-radius: 8px;
+    }
+  
+    /* Aseguramos que el contenedor de texto ocupe todo el ancho */
+    .promotion > div {
+      width: 100% !important;
+    }
+  
+    /* Ajustes tipográficos */
+    .promotion h3 {
+      font-size: 1.5rem !important;
+      margin-bottom: 0.5rem !important;
+    }
+    .promotion p {
+      font-size: 0.9rem !important;
+      margin-bottom: 1rem !important;
+    }
+  
+    /* Botón de acción */
+    .promotion button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem !important;
+      font-size: 0.9rem !important;
+      width: auto !important;
+    }
+  
+    /* Ajustes de Best Sellers */
+    .best-sellers {
+      padding: 1rem !important;
+    }
+    .best-sellers h2 {
+      font-size: 1.5rem !important;
+      margin-bottom: 0.5rem !important;
+    }
+  }
