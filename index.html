@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
    <link rel="stylesheet" href="./style/header.css">
 </head>
-<body></body>
+<body>
     <header>
         <div class="logo">PULSE</div>
         <nav>
@@ -40,113 +40,11 @@
         </div>
     </section>
 
-    <section class="categories">
-        <div class="category-card wifi">
-            <div class="category-content">
-                <h3>WiFi</h3>
-                <button class="btn-small">Ver</button>
-            </div>
-            <div class="category-image">
-                <img src="https://sony.scene7.com/is/image/sonyglobalsolutions/WF-C700N_Primary_1200x1200?$categorypdpnav$&fmt=png-alpha" 
-                alt="WiFi Devices">
-            </div>
-        </div>
-        
-        <div class="category-card smartwatch">
-            <div class="category-content">
-                <h3>Smartwatch</h3>
-                <button class="btn-small">Ver</button>
-            </div>
-            <div class="category-image">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/013/396/329/small_2x/smart-watch-realistic-3d-png.png" alt="Smartwatch">
-            </div>
-        </div>
-        
-        <div class="category-card devices">
-            <div class="category-content">
-                <h3>Devices</h3>
-                <h4>Up to 20% off</h4>
-                <button class="btn-small">Ver</button>
-            </div>
-            <div class="category-image">
-                <img src="https://download.logo.wine/logo/Sony_Energy_Devices_Corporation/Sony_Energy_Devices_Corporation-Logo.wine.png" 
-                alt="Devices">
-            </div>
-        </div>
-        
-        <div class="category-card gaming">
-            <div class="category-content">
-                <h3>Gaming</h3>
-                <button class="btn-small">Ver</button>
-            </div>
-            <div class="category-image">
-                <img src="https://preview.redd.it/1z31z5y520r61.png?width=1080&crop=smart&auto=webp&s=caaebd75c5f7ad3269046fd53046df78d444e864" 
-                alt="Gaming">
-            </div>
-        </div>
-        
-        <div class="category-card accessories">
-            <div class="category-content">
-                <h3>Accessories</h3>
-                <button class="btn-small">Ver</button>
-            </div>
-            <div class="category-image">
-                <img src="https://static.vecteezy.com/system/resources/previews/055/392/053/non_2x/black-gaming-mouse-with-rgb-lighting-isolated-on-transparent-background-free-png.png" alt="Accessories">
-            </div>
-        </div>
-        
-        <div class="category-card airpods">
-            <div class="category-content">
-                <h3>Airpods</h3>
-                <button class="btn-small">Ver</button>
-            </div>
-            <div class="category-image">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/050/817/512/small_2x/white-apple-airpods-in-a-white-case-on-a-transparent-background-png.png" alt="Airpods">
-            </div>
-        </div>
-    </section>
+    <section class="categories" id="categories-container"></section>
 
-    <section class="features">
-        <div class="feature">
-            <div class="feature-icon">
-                <i class="fas fa-truck"></i>
-            </div>
-            <div class="feature-text">
-                <h4>Delivery sin costo</h4>
-                <p>En todos tus pedidos</p>
-            </div>
-        </div>
-        
-        <div class="feature">
-            <div class="feature-icon">
-                <i class="fas fa-shield-alt"></i>
-            </div>
-            <div class="feature-text">
-                <h4>Compra asegurada</h4>
-                <p>Hasta 30 dias en plazo de devolucion</p>
-            </div>
-        </div>
-        
-        <div class="feature">
-            <div class="feature-icon">
-                <i class="fas fa-headset"></i>
-            </div>
-            <div class="feature-text">
-                <h4>Soporte Enlinea</h4>
-                <p>24/7 solo por ti</p>
-            </div>
-        </div>
-        
-        <div class="feature">
-            <div class="feature-icon">
-                <i class="fas fa-credit-card"></i>
-            </div>
-            <div class="feature-text">
-                <h4>Paga Seguro</h4>
-                <p>Cualquier medio de pago</p>
-            </div>
-        </div>
-    </section>
+<section class="features" id="features-container"></section>
+
+    
 
     <section class="banner">
         <div class="banner-content">
@@ -163,6 +61,101 @@
 
     
 
-    <script src="script.js"></script>
+    <script>
+        // Datos de categorías
+const categories = [
+  {
+    name: "WiFi",
+    image: "https://sony.scene7.com/is/image/sonyglobalsolutions/WF-C700N_Primary_1200x1200?$categorypdpnav$&fmt=png-alpha",
+    class: "wifi"
+  },
+  {
+    name: "Smartwatch",
+    image: "https://static.vecteezy.com/system/resources/thumbnails/013/396/329/small_2x/smart-watch-realistic-3d-png.png",
+    class: "smartwatch"
+  },
+  {
+    name: "Devices",
+    image: "https://download.logo.wine/logo/Sony_Energy_Devices_Corporation/Sony_Energy_Devices_Corporation-Logo.wine.png",
+    class: "devices",
+    subtitle: "Up to 20% off"
+  },
+  {
+    name: "Gaming",
+    image: "https://preview.redd.it/1z31z5y520r61.png?width=1080&crop=smart&auto=webp&s=caaebd75c5f7ad3269046fd53046df78d444e864",
+    class: "gaming"
+  },
+  {
+    name: "Accessories",
+    image: "https://static.vecteezy.com/system/resources/previews/055/392/053/non_2x/black-gaming-mouse-with-rgb-lighting-isolated-on-transparent-background-free-png.png",
+    class: "accessories"
+  },
+  {
+    name: "Airpods",
+    image: "https://static.vecteezy.com/system/resources/thumbnails/050/817/512/small_2x/white-apple-airpods-in-a-white-case-on-a-transparent-background-png.png",
+    class: "airpods"
+  }
+];
+
+// Renderizado de categorías
+const categoriesContainer = document.getElementById("categories-container");
+
+categories.forEach(cat => {
+  categoriesContainer.innerHTML += `
+    <div class="category-card ${cat.class}">
+      <div class="category-content">
+        <h3>${cat.name}</h3>
+        ${cat.subtitle ? `<h4>${cat.subtitle}</h4>` : ""}
+        <button class="btn-small">Ver</button>
+      </div>
+      <div class="category-image">
+        <img src="${cat.image}" alt="${cat.name}">
+      </div>
+    </div>
+  `;
+});
+
+// Datos de características (features)
+const features = [
+  {
+    icon: "fas fa-truck",
+    title: "Delivery sin costo",
+    description: "En todos tus pedidos"
+  },
+  {
+    icon: "fas fa-shield-alt",
+    title: "Compra asegurada",
+    description: "Hasta 30 dias en plazo de devolución"
+  },
+  {
+    icon: "fas fa-headset",
+    title: "Soporte Enlinea",
+    description: "24/7 solo por ti"
+  },
+  {
+    icon: "fas fa-credit-card",
+    title: "Paga Seguro",
+    description: "Cualquier medio de pago"
+  }
+];
+
+// Renderizado de características
+const featuresContainer = document.getElementById("features-container");
+
+features.forEach(f => {
+  featuresContainer.innerHTML += `
+    <div class="feature">
+      <div class="feature-icon">
+        <i class="${f.icon}"></i>
+      </div>
+      <div class="feature-text">
+        <h4>${f.title}</h4>
+        <p>${f.description}</p>
+      </div>
+    </div>
+  `;
+});
+
+    </script>
 </body>
 </html>
