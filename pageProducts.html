@@ -10,233 +10,230 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="logo">PULSE</div>
-            <nav>
-                <ul>
-                    <li><a href="./index.html" class="active">Inicio</a></li>
-                    <li><a href="#">Compra</a></li>
-                    <li><a href="./pageProducts.html">Productos</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-            <div class="icons">
-                <a href="#"><i class="fas fa-search"></i></a>
-                <a href="#"><i class="fas fa-user"></i></a>
-                <a href="#"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-        </header>
-
-        <main>
-            <div class="page-title">
-                <h1>Filtrar</h1>
-                <div class="sort">
-                    <span>Ordenar por</span>
-                    <select>
-                        <option>Popularidad</option>
-                        <option>Precio</option>
-                        <option>Antigüedad</option>
-                        <option>Orden A-Z</option>
-                    </select>
+      <header>
+        <div class="logo">PULSE</div>
+        <nav>
+          <ul>
+            <li><a href="./index.html" class="active">Inicio</a></li>
+            <li><a href="#">Compra</a></li>
+            <li><a href="./pageProducts.html">Productos</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="icons">
+          <a href="#"><i class="fas fa-search"></i></a>
+          <a href="#"><i class="fas fa-user"></i></a>
+          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+      </header>
+  
+      <main>
+        <div class="page-title">
+          <h1>Filtrar</h1>
+          <div class="sort">
+            <span>Ordenar por</span>
+            <select>
+              <option>Popularidad</option>
+              <option>Precio</option>
+              <option>Antigüedad</option>
+              <option>Orden A-Z</option>
+            </select>
+          </div>
+        </div>
+  
+        <div class="content-wrapper">
+          <aside class="filters">
+            <div class="filter-section">
+              <h3>PRODUCTOS: 248</h3>
+              <div class="filter-box">
+                <div class="filter-header">FILTROS POR</div>
+                <div class="filter-item">
+                  <div class="filter-label">Quitar filtros</div>
+                  <div class="filter-value"><i class="fas fa-times"></i></div>
                 </div>
+              </div>
             </div>
-
-            <div class="content-wrapper">
-                <aside class="filters">
-                    <div class="filter-section">
-                        <h3>PRODUCTOS: 248</h3>
-                        <div class="filter-box">
-                            <div class="filter-header">FILTROS POR</div>
-                            <div class="filter-item">
-                                <div class="filter-label">Quitar filtros</div>
-                                <div class="filter-value"><i class="fas fa-times"></i></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="filter-section">
-                        <div class="filter-header">
-                            <span>Categoría</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="filter-content">
-                            <div class="filter-item selected">
-                                <div class="filter-label">Zapatos</div>
-                                <div class="filter-value"><i class="fas fa-times"></i></div>
-                            </div>
-                            <div class="filter-subitem">
-                                <div class="filter-label">Hombre</div>
-                                <div class="filter-value">248</div>
-                            </div>
-                            <div class="filter-subitem">
-                                <div class="filter-label">Niños</div>
-                                <div class="filter-value">86</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="filter-section">
-                        <div class="filter-header">
-                            <span>Género</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="filter-content">
-                            <div class="filter-item">
-                                <input type="checkbox" id="men" checked>
-                                <label for="men">Hombre</label>
-                            </div>
-                            <div class="filter-item">
-                                <input type="checkbox" id="women">
-                                <label for="women">Mujer</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="filter-section">
-                        <div class="filter-header">
-                            <span>Disciplina deportiva</span>
-                            <i class="fas fa-plus"></i>
-                        </div>
-                    </div>
-
-                    <div class="filter-section">
-                        <div class="filter-header">
-                            <span>Tecnología</span>
-                            <i class="fas fa-plus"></i>
-                        </div>
-                    </div>
-
-                    <div class="filter-section">
-                        <div class="filter-header">
-                            <span>Tipo</span>
-                            <i class="fas fa-plus"></i>
-                        </div>
-                    </div>
-
-                    <div class="filter-section">
-                        <div class="filter-header">
-                            <span>Precio</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="filter-content">
-                            <div class="price-range">
-                                <input type="text" placeholder="Desde" class="price-input">
-                                <input type="text" placeholder="Hasta" class="price-input">
-                            </div>
-                            <button class="price-btn">MOSTRAR</button>
-                        </div>
-                    </div>
-
-                    <div class="filter-section">
-                        <div class="filter-header">
-                            <span>Personalización</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="filter-content">
-                            <div class="filter-item">
-                                <div class="personalize-icon"></div>
-                                <div class="filter-label">Personaliza <span>la tuya</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="filter-section">
-                        <div class="filter-header">
-                            <span>Elegir color</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="filter-content">
-                            <div class="color-grid">
-                                <div class="color-box white"></div>
-                                <div class="color-box yellow"></div>
-                                <div class="color-box orange"></div>
-                                <div class="color-box red"></div>
-                                <div class="color-box green"></div>
-                                <div class="color-box blue"></div>
-                                <div class="color-box purple"></div>
-                                <div class="color-box pink"></div>
-                                <div class="color-box brown"></div>
-                                <div class="color-box grey"></div>
-                                <div class="color-box black"></div>
-                                <div class="color-box multi"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="filter-section">
-                        <div class="filter-header">
-                            <span>Ancho</span>
-                            <i class="fas fa-plus"></i>
-                        </div>
-                    </div>
-
-                    <div class="filter-section">
-                        <div class="filter-header">
-                            <span>Colecciones</span>
-                            <i class="fas fa-plus"></i>
-                        </div>
-                    </div>
-                </aside>
-
-                <div class="products">
-                    <div class="product-row">
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="https://wallpapers.com/images/featured/ps5-console-png-ywbv2gv3gfw23o3w.jpg" alt="Consola PS5">
-                            </div>
-                            <div class="product-info">
-                                <h3>PS5</h3>
-                                <p>Consola Sony con lector</p>
-                                <div class="product-price">S/ 3990</div>
-                                <div class="product-colors">3 unidades</div>
-                                <button class="add-to-cart"><a href="./product.html">Comprar</a></button>
-                            </div>
-                        </div>
-
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="https://wallpapers.com/images/featured/ps5-console-png-ywbv2gv3gfw23o3w.jpg" alt="Consola PS5">
-                            </div>
-                            <div class="product-info">
-                                <h3>PS5</h3>
-                                <p>Consola Sony con lector</p>
-                                <div class="product-price">S/ 3990</div>
-                                <div class="product-colors">3 unidades</div>
-                                <button class="add-to-cart"><a href="./product.html">Comprar</a></button>
-                            </div>
-                        </div>
-
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="https://wallpapers.com/images/featured/ps5-console-png-ywbv2gv3gfw23o3w.jpg" alt="Consola PS5">
-                            </div>
-                            <div class="product-info">
-                                <h3>PS5</h3>
-                                <p>Consola Sony con lector</p>
-                                <div class="product-price">S/ 3990</div>
-                                <div class="product-colors">3 unidades</div>
-                                <button class="add-to-cart"><a href="./product.html">Comprar</a></button>
-                            </div>
-                        </div>
-
-                        <div class="product-card promo">
-                            <div class="promo-tag">PROMO</div>
-                            <div class="product-image">
-                                <img src="https://mytechpoint.lk/wp-content/uploads/2024/09/god-rad.png" alt="God of War Ragnarok">
-                            </div>
-                            <div class="product-info">
-                                <h3>God of War Ragnarok</h3>
-                                <p>Videojuego de la saga nórdica</p>
-                                <div class="product-price">S/ 180<span class="old-price"> S/240</span></div>
-                                <div class="product-colors">6 unidades</div>
-                                <button class="add-to-cart"><a href="./product.html">Comprar</a></button>
-                            </div>
-                        </div>
-                    </div>
+  
+            <div class="filter-section">
+              <div class="filter-header">
+                <span>Categoría</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="filter-content">
+                <div class="filter-item selected">
+                  <div class="filter-label">Zapatos</div>
+                  <div class="filter-value"><i class="fas fa-times"></i></div>
                 </div>
+                <div class="filter-subitem">
+                  <div class="filter-label">Hombre</div>
+                  <div class="filter-value">248</div>
+                </div>
+                <div class="filter-subitem">
+                  <div class="filter-label">Niños</div>
+                  <div class="filter-value">86</div>
+                </div>
+              </div>
             </div>
-        </main>
+  
+            <div class="filter-section">
+              <div class="filter-header">
+                <span>Género</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="filter-content">
+                <div class="filter-item">
+                  <input type="checkbox" id="men" checked>
+                  <label for="men">Hombre</label>
+                </div>
+                <div class="filter-item">
+                  <input type="checkbox" id="women">
+                  <label for="women">Mujer</label>
+                </div>
+              </div>
+            </div>
+  
+            <div class="filter-section">
+              <div class="filter-header">
+                <span>Disciplina deportiva</span>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+  
+            <div class="filter-section">
+              <div class="filter-header">
+                <span>Tecnología</span>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+  
+            <div class="filter-section">
+              <div class="filter-header">
+                <span>Tipo</span>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+  
+            <div class="filter-section">
+              <div class="filter-header">
+                <span>Precio</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="filter-content">
+                <div class="price-range">
+                  <input type="text" placeholder="Desde" class="price-input">
+                  <input type="text" placeholder="Hasta" class="price-input">
+                </div>
+                <button class="price-btn">MOSTRAR</button>
+              </div>
+            </div>
+  
+            <div class="filter-section">
+              <div class="filter-header">
+                <span>Personalización</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="filter-content">
+                <div class="filter-item">
+                  <div class="personalize-icon"></div>
+                  <div class="filter-label">Personaliza <span>la tuya</span></div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="filter-section">
+              <div class="filter-header">
+                <span>Elegir color</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="filter-content">
+                <div class="color-grid">
+                  <div class="color-box white"></div>
+                  <div class="color-box yellow"></div>
+                  <div class="color-box orange"></div>
+                  <div class="color-box red"></div>
+                  <div class="color-box green"></div>
+                  <div class="color-box blue"></div>
+                  <div class="color-box purple"></div>
+                  <div class="color-box pink"></div>
+                  <div class="color-box brown"></div>
+                  <div class="color-box grey"></div>
+                  <div class="color-box black"></div>
+                  <div class="color-box multi"></div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="filter-section">
+              <div class="filter-header">
+                <span>Ancho</span>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+  
+            <div class="filter-section">
+              <div class="filter-header">
+                <span>Colecciones</span>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+          </aside>
+  
+          <div class="products">
+            <div id="products-container" class="product-row">
+              <!-- Contenido generado dinámicamente -->
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
-</body>
+  
+    <script>
+      const products = [
+        {
+          title: "PS5",
+          description: "Consola Sony con lector",
+          price: "S/ 3990",
+          units: "3 unidades",
+          image: "https://wallpapers.com/images/featured/ps5-console-png-ywbv2gv3gfw23o3w.jpg",
+          promo: false
+        },
+        {
+          title: "God of War Ragnarok",
+          description: "Videojuego de la saga nórdica",
+          price: "S/ 180",
+          oldPrice: "S/240",
+          units: "6 unidades",
+          image: "https://mytechpoint.lk/wp-content/uploads/2024/09/god-rad.png",
+          promo: true
+        }
+      ];
+  
+      const container = document.getElementById("products-container");
+  
+      products.forEach(product => {
+        const card = document.createElement("div");
+        card.className = `product-card${product.promo ? " promo" : ""}`;
+  
+        card.innerHTML = `
+          ${product.promo ? '<div class="promo-tag">PROMO</div>' : ""}
+          <div class="product-image">
+            <img src="${product.image}" alt="${product.title}">
+          </div>
+          <div class="product-info">
+            <h3>${product.title}</h3>
+            <p>${product.description}</p>
+            <div class="product-price">
+              ${product.price}${product.oldPrice ? `<span class="old-price"> ${product.oldPrice}</span>` : ""}
+            </div>
+            <div class="product-colors">${product.units}</div>
+            <button class="add-to-cart"><a href="./product.html">Comprar</a></button>
+          </div>
+        `;
+  
+        container.appendChild(card);
+      });
+    </script>
+  </body>
+  
 </html>

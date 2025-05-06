@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
+<body></body>
     <div class="container">
         <header>
             <div class="logo">PULSE</div>
@@ -28,15 +28,77 @@
             </div>
         </header>
 
-        <div class="breadcrumb">
-            <a href="#">Inicio</a> > <a href="#">Consolas</a> > <span>PlayStation 5 Standard Edition</span>
-        </div>
+        <div class="breadcrumb" id="breadcrumb"></div>
 
-        <main class="product-page">
+        <main class="product-page" id="productPage"></main>
+    </div>
+
+    <script>
+        const product = {
+            name: "PlayStation 5 Standard Edition",
+            code: "PS5STD2025",
+            rating: 4.5,
+            reviews: 56,
+            colors: ["#ffffff", "#000000"],
+            storageOptions: [
+                { value: "825 GB", disabled: false },
+                { value: "1 TB", disabled: true }
+            ],
+            price: 2400,
+            oldPrice: 3990,
+            seller: "GamerZone",
+            images: [
+                "https://via.placeholder.com/200x150?text=Vista+Frontal",
+                "https://via.placeholder.com/200x150?text=Vista+Superior",
+                "https://via.placeholder.com/200x150?text=Vista+Lateral",
+                "https://via.placeholder.com/200x150?text=Con+Control",
+                "https://via.placeholder.com/200x150?text=Vista+Posterior"
+            ],
+            specs: {
+                "Fabricante": "Sony",
+                "Modelo": "PlayStation 5 Standard Edition",
+                "Almacenamiento": "825 GB SSD",
+                "Resolución": "Hasta 8K",
+                "Color": "Blanco/Negro"
+            },
+            description: "La nueva consola PlayStation 5 de Sony te ofrece una experiencia de juego completamente inmersiva gracias a su SSD ultra rápido, retroalimentación háptica, gatillos adaptativos y gráficos sorprendentes. Ideal para jugadores que buscan la mejor calidad en rendimiento y velocidad."
+        };
+
+        document.getElementById("breadcrumb").innerHTML = `
+            <a href="#">Inicio</a> > <a href="#">Consolas</a> > <span>${product.name}</span>
+        `;
+
+        const ratingStars = Math.floor(product.rating);
+        const hasHalfStar = product.rating % 1 !== 0;
+        const starsHTML = Array.from({length: ratingStars}, () => '<i class="fas fa-star"></i>').join('') +
+            (hasHalfStar ? '<i class="fas fa-star-half-alt"></i>' : '');
+
+        const colorOptions = product.colors.map((color, index) => `
+            <div class="color-option ${index === 0 ? 'selected' : ''}" style="background-color: ${color};"></div>
+        `).join('');
+
+        const storageOptions = product.storageOptions.map(opt => `
+            <div class="size-option ${opt.disabled ? 'disabled' : 'selected'}">${opt.value}</div>
+        `).join('');
+
+        const imagesHTML = product.images.map(src => `
+            <div class="product-image-item">
+                <img src="${src}" alt="Imagen del producto">
+            </div>
+        `).join('');
+
+        const specsHTML = Object.entries(product.specs).map(([key, value]) => `
+            <div class="characteristic-item">
+                <div class="characteristic-name">${key}</div>
+                <div class="characteristic-value">${value}</div>
+            </div>
+        `).join('');
+
+        document.getElementById("productPage").innerHTML = `
             <div class="product-main">
                 <div class="product-gallery">
                     <div class="main-image">
-                        <img src="https://wallpapers.com/images/featured/ps5-console-png-ywbv2gv3gfw23o3w.jpg" alt="PlayStation 5">
+                        <img src="https://wallpapers.com/images/featured/ps5-console-png-ywbv2gv3gfw23o3w.jpg" alt="${product.name}">
                     </div>
                     <div class="thumbnail-gallery">
                         <div class="thumbnail-dots">
@@ -50,35 +112,23 @@
                 </div>
 
                 <div class="product-info">
-                    <h1>PlayStation 5 Standard Edition</h1>
-                    <div class="product-code">Código del producto: PS5STD2025</div>
-                    
+                    <h1>${product.name}</h1>
+                    <div class="product-code">Código del producto: ${product.code}</div>
+
                     <div class="product-rating">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="reviews-count">56 reseñas</span>
+                        <div class="stars">${starsHTML}</div>
+                        <span class="reviews-count">${product.reviews} reseñas</span>
                     </div>
 
                     <div class="product-options">
                         <div class="option-group">
                             <div class="option-label">Color</div>
-                            <div class="color-options">
-                                <div class="color-option selected" style="background-color: #ffffff;"></div>
-                                <div class="color-option" style="background-color: #000000;"></div>
-                            </div>
+                            <div class="color-options">${colorOptions}</div>
                         </div>
 
                         <div class="option-group">
                             <div class="option-label">Almacenamiento</div>
-                            <div class="size-options">
-                                <div class="size-option selected">825 GB</div>
-                                <div class="size-option disabled">1 TB</div>
-                            </div>
+                            <div class="size-options">${storageOptions}</div>
                         </div>
 
                         <div class="option-group">
@@ -106,8 +156,8 @@
 
                     <div class="product-price-block">
                         <div class="price-container">
-                            <div class="price"> s/ 2400</div>
-                            <div class="old-price">s/ 3990 </div>
+                            <div class="price">s/ ${product.price}</div>
+                            <div class="old-price">s/ ${product.oldPrice}</div>
                         </div>
                         <div class="buy-buttons">
                             <button class="buy-button">Comprar</button>
@@ -117,7 +167,7 @@
 
                     <div class="seller-info">
                         <div class="seller-label">Vendedor: </div>
-                        <div class="seller-name">GamerZone</div>
+                        <div class="seller-name">${product.seller}</div>
                     </div>
                 </div>
             </div>
@@ -126,29 +176,13 @@
                 <div class="tabs-header">
                     <div class="tab active">Descripción</div>
                     <div class="tab">Especificaciones</div>
-                    <div class="tab">Opiniones (56)</div>
+                    <div class="tab">Opiniones (${product.reviews})</div>
                     <div class="tab">Fotos y videos</div>
                     <div class="tab">Preguntas</div>
                 </div>
 
                 <div class="tab-content">
-                    <div class="product-images-grid">
-                        <div class="product-image-item">
-                            <img src="https://via.placeholder.com/200x150?text=Vista+Frontal" alt="PS5 vista frontal">
-                        </div>
-                        <div class="product-image-item">
-                            <img src="https://via.placeholder.com/200x150?text=Vista+Superior" alt="PS5 vista superior">
-                        </div>
-                        <div class="product-image-item">
-                            <img src="https://via.placeholder.com/200x150?text=Vista+Lateral" alt="PS5 vista lateral">
-                        </div>
-                        <div class="product-image-item">
-                            <img src="https://via.placeholder.com/200x150?text=Con+Control" alt="PS5 con control">
-                        </div>
-                        <div class="product-image-item">
-                            <img src="https://via.placeholder.com/200x150?text=Vista+Posterior" alt="PS5 vista posterior">
-                        </div>
-                    </div>
+                    <div class="product-images-grid">${imagesHTML}</div>
                 </div>
             </div>
 
@@ -158,28 +192,7 @@
                         <h2>Especificaciones</h2>
                         <a href="#" class="see-all">Ver todo <i class="fas fa-chevron-right"></i></a>
                     </div>
-                    <div class="characteristics">
-                        <div class="characteristic-item">
-                            <div class="characteristic-name">Fabricante</div>
-                            <div class="characteristic-value">Sony</div>
-                        </div>
-                        <div class="characteristic-item">
-                            <div class="characteristic-name">Modelo</div>
-                            <div class="characteristic-value">PlayStation 5 Standard Edition</div>
-                        </div>
-                        <div class="characteristic-item">
-                            <div class="characteristic-name">Almacenamiento</div>
-                            <div class="characteristic-value">825 GB SSD</div>
-                        </div>
-                        <div class="characteristic-item">
-                            <div class="characteristic-name">Resolución</div>
-                            <div class="characteristic-value">Hasta 8K</div>
-                        </div>
-                        <div class="characteristic-item">
-                            <div class="characteristic-name">Color</div>
-                            <div class="characteristic-value">Blanco/Negro</div>
-                        </div>
-                    </div>
+                    <div class="characteristics">${specsHTML}</div>
                 </div>
 
                 <div class="details-section">
@@ -187,19 +200,18 @@
                         <h2>Descripción</h2>
                     </div>
                     <div class="description">
-                        <p>La nueva consola PlayStation 5 de Sony te ofrece una experiencia de juego completamente inmersiva gracias a su SSD ultra rápido, retroalimentación háptica, gatillos adaptativos y gráficos sorprendentes. Ideal para jugadores que buscan la mejor calidad en rendimiento y velocidad.</p>
+                        <p>${product.description}</p>
                     </div>
                 </div>
 
                 <div class="details-section">
                     <div class="section-header">
-                        <h2>Opiniones (56)</h2>
+                        <h2>Opiniones (${product.reviews})</h2>
                         <a href="#" class="see-all">Ver todo <i class="fas fa-chevron-right"></i></a>
                     </div>
-                    <!-- Aquí puedes insertar las opiniones en español -->
                 </div>
             </div>
-        </main>
-    </div>
+        `;
+    </script>
 </body>
 </html>
