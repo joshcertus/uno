@@ -11,3 +11,14 @@ function ageConfirm(edad){
 }
 
 ageConfirm(pedro)
+
+
+async function getPokemons(){
+    const urlPicahu= "https://pokeapi.co/api/v2/pokemon/pikachu";
+    let response = await fetch(urlPicahu);
+    const pokemon  = await response.json();
+
+    console.log(pokemon);
+}
+
+getPokemons();

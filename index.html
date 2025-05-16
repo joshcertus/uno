@@ -10,152 +10,113 @@
    <link rel="stylesheet" href="./style/header.css">
 </head>
 <body>
-    <header>
-        <div class="logo">PULSE</div>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Inicio</a></li>
-                <li><a href="#">Compras</a></li>
-                <li><a href="./pageProducts.html">Productos</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-        <div class="icons">
-            <a href="#"><i class="fas fa-search"></i></a>
-            <a href="#"><i class="fas fa-user"></i></a>
-            <a href="#"><i class="fas fa-shopping-cart"></i></a>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h3>Nuevo</h3>
-            <h1>Sony Qk-r700b <br><span>Audio Envolvente</span></h1>
-            <button class="btn-primary">Obtenlo aqui</button>
-        </div>
-        <div class="hero-image">
-            <img src="https://sony.scene7.com/is/image/sonyglobalsolutions/wh-ch720_Primary_image?$categorypdpnav$&fmt=png-alpha" 
-            alt="Wireless Headphones">
-        </div>
-    </section>
-
-    <section class="categories" id="categories-container"></section>
-
-<section class="features" id="features-container"></section>
-
-    
-
-    <section class="banner">
-        <div class="banner-content">
-            <h2>Ecuentra tu <br>Estilo</h2>
-            <h3>50% en Audio</h3>
-            <button class="btn-primary"
-            style="border:solid 1px white"
-            >Ver ahora</button>
-        </div>
-        <div class="banner-image">
-            <img src="https://pngimg.com/d/headphones_PNG7652.png" alt="Headphones Summer Sale">
-        </div>
-    </section>
-
-    
-
-    <script>
-        // Datos de categorías
-const categories = [
-  {
-    name: "WiFi",
-    image: "https://sony.scene7.com/is/image/sonyglobalsolutions/WF-C700N_Primary_1200x1200?$categorypdpnav$&fmt=png-alpha",
-    class: "wifi"
-  },
-  {
-    name: "Smartwatch",
-    image: "https://static.vecteezy.com/system/resources/thumbnails/013/396/329/small_2x/smart-watch-realistic-3d-png.png",
-    class: "smartwatch"
-  },
-  {
-    name: "Devices",
-    image: "https://download.logo.wine/logo/Sony_Energy_Devices_Corporation/Sony_Energy_Devices_Corporation-Logo.wine.png",
-    class: "devices",
-    subtitle: "Up to 20% off"
-  },
-  {
-    name: "Gaming",
-    image: "https://preview.redd.it/1z31z5y520r61.png?width=1080&crop=smart&auto=webp&s=caaebd75c5f7ad3269046fd53046df78d444e864",
-    class: "gaming"
-  },
-  {
-    name: "Accessories",
-    image: "https://static.vecteezy.com/system/resources/previews/055/392/053/non_2x/black-gaming-mouse-with-rgb-lighting-isolated-on-transparent-background-free-png.png",
-    class: "accessories"
-  },
-  {
-    name: "Airpods",
-    image: "https://static.vecteezy.com/system/resources/thumbnails/050/817/512/small_2x/white-apple-airpods-in-a-white-case-on-a-transparent-background-png.png",
-    class: "airpods"
-  }
-];
-
-// Renderizado de categorías
-const categoriesContainer = document.getElementById("categories-container");
-
-categories.forEach(cat => {
-  categoriesContainer.innerHTML += `
-    <div class="category-card ${cat.class}">
-      <div class="category-content">
-        <h3>${cat.name}</h3>
-        ${cat.subtitle ? `<h4>${cat.subtitle}</h4>` : ""}
-        <button class="btn-small">Ver</button>
+  <header>
+      <div class="logo">PULSE</div>
+      <nav>
+          <ul>
+              <li><a href="index.html" class="active">Inicio</a></li>
+              <li><a href="#">Compras</a></li>
+              <li><a href="./pageProducts.html">Productos</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contacto</a></li>
+          </ul>
+      </nav>
+      <div class="icons">
+          <a href="#"><i class="fas fa-search"></i></a>
+          <a href="#"><i class="fas fa-user"></i></a>
+          <a href="#"><i class="fas fa-shopping-cart"></i></a>
       </div>
-      <div class="category-image">
-        <img src="${cat.image}" alt="${cat.name}">
+  </header>
+
+  <section class="hero">
+      <div class="hero-content">
+          <h3>Nuevo</h3>
+          <h1>Sony Qk-r700b <br><span>Audio Envolvente</span></h1>
+          <button class="btn-primary">Obtenlo aqui</button>
       </div>
-    </div>
-  `;
-});
-
-// Datos de características (features)
-const features = [
-  {
-    icon: "fas fa-truck",
-    title: "Delivery sin costo",
-    description: "En todos tus pedidos"
-  },
-  {
-    icon: "fas fa-shield-alt",
-    title: "Compra asegurada",
-    description: "Hasta 30 dias en plazo de devolución"
-  },
-  {
-    icon: "fas fa-headset",
-    title: "Soporte Enlinea",
-    description: "24/7 solo por ti"
-  },
-  {
-    icon: "fas fa-credit-card",
-    title: "Paga Seguro",
-    description: "Cualquier medio de pago"
-  }
-];
-
-// Renderizado de características
-const featuresContainer = document.getElementById("features-container");
-
-features.forEach(f => {
-  featuresContainer.innerHTML += `
-    <div class="feature">
-      <div class="feature-icon">
-        <i class="${f.icon}"></i>
+      <div class="hero-image">
+          <img src="https://sony.scene7.com/is/image/sonyglobalsolutions/wh-ch720_Primary_image?$categorypdpnav$&fmt=png-alpha" 
+          alt="Wireless Headphones">
       </div>
-      <div class="feature-text">
-        <h4>${f.title}</h4>
-        <p>${f.description}</p>
-      </div>
-    </div>
-  `;
-});
+  </section>
 
-    </script>
+  <section class="categories" id="categories-container"></section>
+
+  <section class="features" id="features-container"></section>
+
+  <section class="banner">
+      <div class="banner-content">
+          <h2>Ecuentra tu <br>Estilo</h2>
+          <h3>50% en Audio</h3>
+          <button class="btn-primary" style="border:solid 1px white">Ver ahora</button>
+      </div>
+      <div class="banner-image">
+          <img src="https://pngimg.com/d/headphones_PNG7652.png" alt="Headphones Summer Sale">
+      </div>
+  </section>
+
+  <!-- seccion de carrousel -->
+  <section class="product-carousel-section">
+      <h2 class="section-title">Productos Destacados</h2>
+      <div class="carousel-container">
+          <div class="carousel" id="product-carousel">
+              
+          </div>
+          <div class="carousel-nav">
+              <button class="prev"><i class="fas fa-chevron-left"></i></button>
+              <button class="next"><i class="fas fa-chevron-right"></i></button>
+          </div>
+          <div class="carousel-dots" id="carousel-dots">
+              
+          </div>
+      </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+      <div class="footer-content">
+          <div class="footer-column">
+              <h3>Sobre Nosotros</h3>
+              <p>PULSE es tu tienda de tecnología de confianza. Ofrecemos los mejores productos electrónicos con garantía y servicio excepcional.</p>
+              <div class="social-icons">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+          </div>
+          <div class="footer-column">
+              <h3>Enlaces Rápidos</h3>
+              <ul>
+                  <li><a href="#">Inicio</a></li>
+                  <li><a href="#">Productos</a></li>
+                  <li><a href="#">Ofertas</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Contacto</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>Categorías</h3>
+              <ul>
+                  <li><a href="#">Audio</a></li>
+                  <li><a href="#">Smartwatches</a></li>
+                  <li><a href="#">Accesorios</a></li>
+                  <li><a href="#">Gaming</a></li>
+                  <li><a href="#">Dispositivos</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>Contacto</h3>
+              <p><i class="fas fa-map-marker-alt"></i> Av. Tecnológica 123, Ciudad</p>
+              <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+              <p><i class="fas fa-envelope"></i> info@pulse.com</p>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; 2025 PULSE. Todos los derechos reservados.</p>
+      </div>
+  </footer>
+
+  <script src="./main.js"></script>
 </body>
 </html>
