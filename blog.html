@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - TechStore</title>
+    <link rel="stylesheet" href="compras.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">PULSE</div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./compras.html">Productos</a></li>
+                    <li><a href="./blog.html" class="active">Blog</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" class="search-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </a>
+                <a href="#" class="cart-icon" id="cart-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Nuestro Blog</h1>
+                <p>Noticias, guías y tendencias sobre tecnología</p>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section class="blog">
+            <div class="container">
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Auriculares Wireless">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date">15 Mayo, 2023</span>
+                            <h3>Guía completa para elegir los mejores auriculares wireless</h3>
+                            <p>Descubre los factores clave que debes considerar al comprar auriculares inalámbricos y nuestras recomendaciones.</p>
+                            <a href="#" class="read-more">Leer más</a>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Gaming Setup">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date">10 Mayo, 2023</span>
+                            <h3>Cómo montar el setup gaming perfecto en 2023</h3>
+                            <p>Desde la elección de componentes hasta la configuración final, todo lo que necesitas saber para crear tu espacio gaming ideal.</p>
+                            <a href="#" class="read-more">Leer más</a>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1546054454-aa26e2b734c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Smart Home">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date">5 Mayo, 2023</span>
+                            <h3>El futuro de los dispositivos inteligentes para el hogar</h3>
+                            <p>Analizamos las tendencias emergentes en tecnología para hogares inteligentes y cómo pueden mejorar tu calidad de vida.</p>
+                            <a href="#" class="read-more">Leer más</a>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Audio Systems">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date">1 Mayo, 2023</span>
+                            <h3>Sistemas de audio: ¿Qué debes saber antes de comprar?</h3>
+                            <p>Una guía completa sobre los diferentes tipos de sistemas de audio y cómo elegir el adecuado para tus necesidades.</p>
+                            <a href="#" class="read-more">Leer más</a>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="WiFi Technology">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date">25 Abril, 2023</span>
+                            <h3>WiFi 6: Todo lo que necesitas saber sobre la nueva generación</h3>
+                            <p>Descubre las ventajas del WiFi 6, cómo puede mejorar tu conexión y los dispositivos compatibles disponibles.</p>
+                            <a href="#" class="read-more">Leer más</a>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Headphones Comparison">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date">20 Abril, 2023</span>
+                            <h3>Comparativa: Los mejores auriculares con cancelación de ruido</h3>
+                            <p>Analizamos y comparamos los modelos más populares del mercado para ayudarte a tomar la mejor decisión.</p>
+                            <a href="#" class="read-more">Leer más</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="pagination">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#" class="next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Suscríbete a nuestro newsletter</h2>
+                    <p>Recibe las últimas noticias y ofertas directamente en tu correo</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+            <button class="close-cart" id="close-cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be added here dynamically -->
+            <div class="empty-cart">
+                <p>Tu carrito está vacío</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="btn btn-primary btn-block">Finalizar Compra</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>TECH STORE</h4>
+                    <p>Tu tienda de tecnología de confianza. Ofrecemos los mejores productos electrónicos con garantía y servicio técnico.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categorías</h4>
+                    <ul>
+                        <li><a href="productos.html">Auriculares</a></li>
+                        <li><a href="productos.html">Dispositivos</a></li>
+                        <li><a href="productos.html">Gaming</a></li>
+                        <li><a href="productos.html">Accesorios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p>Email: info@techstore.com</p>
+                    <p>Teléfono: +34 123 456 789</p>
+                    <p>Dirección: Calle Tecnología 123, Madrid</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TECH STORE. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="compras.js"></script>
+</body>
+</html>

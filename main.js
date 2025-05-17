@@ -94,12 +94,7 @@
 
   // Datos de productos para el carousel
   const products = [
-      {
-          name: "Sony WH-1000XM4",
-          price: "$299.99",
-          rating: 5,
-          image: "https://sony.scene7.com/is/image/sonyglobalsolutions/wh-1000xm4_black_product_shot_1?$categorypdpnav$&fmt=png-alpha"
-      },
+    
       {
           name: "Apple AirPods Pro",
           price: "$249.99",
@@ -110,13 +105,13 @@
           name: "Samsung Galaxy Watch 5",
           price: "$279.99",
           rating: 4,
-          image: "https://images.samsung.com/is/image/samsung/p6pim/latin/2208/gallery/latin-galaxy-watch5-40mm-431107-sm-r900nzsaaro-533186936"
+          image: "https://media.falabella.com/falabellaPE/122764607_01/w=1500,h=1500,fit=pad"
       },
       {
           name: "Bose QuietComfort Earbuds",
           price: "$199.99",
           rating: 4,
-          image: "https://assets.bose.com/content/dam/cloudassets/Bose_DAM/Web/consumer_electronics/global/products/headphones/qc_earbuds/product_silo_images/qc_earbuds_black_EC_hero.png/jcr:content/renditions/cq5dam.web.1280.1280.png"
+          image: "https://production-tailoy-repo-magento-statics.s3.amazonaws.com/imagenes/872x872/productos/i/b/o/bose-qc-ie-earbuds-black-92242-default-1.jpg"
       },
       {
           name: "Sony PlayStation 5",
@@ -136,12 +131,6 @@
           rating: 4,
           image: "https://resource.logitechg.com/d_transparent.gif/content/dam/gaming/en/products/pro-x/pro-headset-hero.png"
       },
-      {
-          name: "JBL Flip 6",
-          price: "$129.99",
-          rating: 4,
-          image: "https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw64735be8/JBL_Flip6_Hero_Black_29399_x3.png"
-      }
   ];
 
   // Renderizado del carousel de productos
